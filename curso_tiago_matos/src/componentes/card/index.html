@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="bg-gray-200 dark:bg-gray-800">
+    <div class="container mx-auto px-4 py-8">
+        <h6 class="font-bold mb-2 dark:text-gray-50">compontente card</h6>
+
+        <div class="bg-white dark:bg-gray-700  rounded-lg shadow-md overflow-hidden">
+            <div class="w-full bg-gray-100 dark:bg-gray-900 p-4 border-b border-gray-200 dark:border-gray-500">
+                <h4 class="font-bold dark:text-gray-50">Topo</h4>
+            </div>
+
+            <div class="p-4 dark:text-gray-50">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit incidunt odit obcaecati, quaerat animi qui consequatur debitis facere magnam sit fuga quasi alias neque assumenda repellendus quam corrupti deleniti nobis?
+            </div>
+            
+            <div class="w-full dark:text-gray-50 bg-gray-50 dark:bg-gray-900 p-4 border-t border-gray-200 dark:border-gray-500 font-semibold">
+                Rodapé
+            </div>
+        </div>
+
+    </div>
+    <button class="absolute bottom-0 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 shadow-md p-2 mt-2 rounded-r-md active:bg-gray-900 dark:active:bg-gray-300">Dark mode</button>
+
+    <script>
+        const btn = document.querySelector('button')
+        const htmlElement = document.documentElement
+
+        btn.addEventListener('click', () =>{
+            htmlElement.classList.contains('dark')? btn.textContent = "Dark Mode": btn.textContent = "Light Mode"
+            htmlElement.classList.toggle('dark')
+        })
+    </script>
+</body>
+</html>

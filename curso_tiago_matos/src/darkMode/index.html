@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using the configuration archive</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="p-4 dark:bg-gray-950">
+    <h1 class="pl-8 dark:text-white">Botãozinho :p</h1>
+    <div class="bg-brand-100 text-white p-4 w-40 text-center rounded hover:scale-105 cursor-pointer active:bg-brand-200 dark:bg-gray-700">Hello, World!</div>
+    <div class="bg-brand-200 text-white p-4 w-40 my-2 text-center rounded hover:scale-105 cursor-pointer active:bg-brand-100 dark:bg-gray-800">Hello, World!</div>
+    <div class="bg-brand-300 text-white p-4 w-40 my-2 text-center rounded hover:scale-105 cursor-pointer active:bg-brand-200 dark:bg-gray-900">Hello, World!</div>
+    <br>
+    <div class="p-teste bg-brand-100 dark:bg-gray-900"></div>
+
+
+    <button class="bg-gray-800 text-white rounded-md p-4 my-4 active:bg-gray-950 dark:bg-gray-300 dark:text-black dark:active:bg-gray-400">Toggle darkMode</button>
+    <script>
+        const btn = document.querySelector('button')
+
+        btn.addEventListener('click', ()=>{
+            const htmlElement = document.documentElement
+            //se true                      /se false
+            htmlElement.classList.contains('dark')? btn.textContent = "Dark Mode": btn.textContent = "Light Mode"
+            
+            htmlElement.classList.toggle('dark')
+        })
+    </script>
+</body>
+</html>

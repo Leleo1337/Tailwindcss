@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="bg-gray-100">
+    <div class="p-10">
+        <h6 class="font-bold mb-2">compontente dropdown</h6>
+        <div class="relative">
+            <button class="flex items-center bg-white border border-gray-300 rounded px-2 py-1 text-sm text-gray-800 shadow">   
+                Botão
+                <svg class=" w-4 h-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                </svg>
+            </button>
+            <div id="dropdown" class="absolute bg-white border border-gray-200 py-1 shadow-md rounded-md" style="width: 200px;">
+                <a href="" class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100">link 1</a>    
+                <a href="" class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100">link 2</a>
+                <a href="" class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100">link 3</a>
+                <a href="" class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100">link 4</a>
+                <a href="" class="block text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100">link 5</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button')
+        const dropdown = document.querySelector('#dropdown')
+        btn.addEventListener('click', () =>{
+            dropdown.classList.toggle('hidden')
+        })
+
+    </script>
+</body>
+</html>
